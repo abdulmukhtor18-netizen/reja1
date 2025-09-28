@@ -7,7 +7,7 @@ const connectionString = "mongodb+srv://abdulmukhtor18_db:J0WjbMsUBsAjsf0k@clust
 // MongoDB ga ulanish
 MongoClient.connect(connectionString)
   .then(client => {
-    console.log("✅ MongoDB connected successfully");
+    console.log(" MongoDB connected successfully");
 
     const server = http.createServer(app);
     const PORT = 3000;
