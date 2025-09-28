@@ -69,17 +69,41 @@
 // }
 // run();
 
-// A-task
-function countLetter(letter, word) {
-  let count = 0;
-  for (let i = 0; i < word.length; i++) {
-    if (word[i] === letter) {
-      count++;
-    }
+// // A-task
+// function countLetter(letter, word) {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+
+// console.log(countLetter("e", "engineer")); 
+// console.log(countLetter("a", "mexanizalashtirolmaganingizdandurda")); 
+
+
+
+//  ⭐️ Synchronous function vs Asynchronous function
+// Asynchronous: CALLBACK
+
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng bolmaydi", null);
+  } else {
+    const c = a % b;
+    callback(null, c, true);
   }
-  return count;
 }
 
-
-console.log(countLetter("e", "engineer")); 
-console.log(countLetter("a", "mexanizalashtirolmaganingizdandurda")); 
+// CALL
+qoldiqliBolish(8, 5, (err, data) => {
+  if (err) console.log("ERROR:", err);
+  else {
+    console.log("data:", data);
+    console.log("MANTIQLAR ...");
+  }
+});
