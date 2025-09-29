@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reja</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTN6wy59ffFIbUQGpLsa9DKKhmpQ0g1Dm4iMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body style="background-color:#b8bbd1" class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex align-items-center">
+        <h1 class="display-4 my-4 mr-3">REJA VA MAQSADLAR</h1>
+        <div class="jumbotron p-3 shadow-sm" style="background-color: transparent;">
+            <form id="create-form" action="/create-item" method="POST">
+                <div class="d-flex align-items-center">
+                    <input
+                    id="create-field"
+                    name="item"
+                    autofocus
+                    autocomplete="off"
+                    class="form-control mr-3"
+                    type="text"
+                    placeholder="this is great"
+                    style="flex:1"
+                    />
+                    <button class="btn btn-primary" style="border-radius: 20px; background-color: blue;">Yangi reja qo'shish</button>
+                </div>
+            </form>
+        </div>
+        <ul id="item-list" class="list-group pb-5">
+        <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+            <span class="item-text">Matn shu yerga chiqadi</span>
+            <div>
+            <button class="edit-me btn btn-secondary btn-sm mr-1">O‘zgartirish</button>
+            <button class="delete-me btn btn-danger btn-sm">O‘chirish</button>
+            </div>
+        </li>
+        </ul>
+
+    </div>
+</body>
+</html>
